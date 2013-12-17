@@ -1,0 +1,137 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MyPageMaster.Master.cs" Inherits="Gestion_Vente.Site1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    
+    <link href="~/Styles/GestionVente.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+      <style type="text/css">
+        .style1
+        {
+            width: 960px;
+            height: 208px;
+        }
+    </style>
+</head>
+<body>
+<div id="fb-root"></div>
+<script>    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/fr_FR/all.js#xfbml=1";
+        fjs.parentNode.insertBefore(js, fjs);
+    } (document, 'script', 'facebook-jssdk'));
+    </script>
+   
+    <form id="form1" runat="server">
+
+     <div class="page"><!--1-->
+<div class="header"><!--2--><img id="Img1" alt="" class="style1" src="Images/regalia3.jpg" runat="server"/>
+
+               <!---   <div><!--2.0--> <div class="SeConnecter" >
+                                            <div  id="nonconnecterdiv" runat="server">
+
+                                               [ <a href="Authentification.aspx" ID="HeadLoginStatus" runat="server">Se Connecter</a> ]
+                                            </div>
+                                            <div  id="connecterdiv"  runat="server" ><!--2.1-->
+                                                   <asp:Label ID="loginlabel" runat="server" Text="Label" Font-Size="X-Large" Font-Italic="true" ForeColor="White"></asp:Label><br />  
+                                                   <asp:LinkButton ID="LinkButton1" runat="server" onclick="LinkButton1_Click">[ Se DeConnecter ]</asp:LinkButton>
+                                             </div>
+
+            </div>
+                           
+               
+       
+        <div id='divmenu'>
+<ul>
+                                   <li class='active'><a href='Accueil.aspx'><span>Acceuil</span></a></li>
+                                   <li class='has-sub'><a href='Cmdsuivie.aspx'><span>Suivre les Commandes</span></a>
+                                      <ul>
+                                         <li class='has-sub'><a href='#'><span>Product 1</span></a>
+                                            <ul>
+                                               <li class='last'><a href='#'><span>Sub Item</span></a></li>
+                                            </ul>
+                                         </li>
+                                         <li class='has-sub'><a href='#'><span>Product 2</span></a>
+                                            <ul>
+                                               <li class='last'><a href='~/PoserArticle.aspx'><span>Poser Un Article </span></a></li>
+                                            </ul>
+                                         </li>
+                                      </ul>
+                                   </li>
+                                   <li><a href='PoserArticle.aspx'><span>Poser Un Article </span></a></li>
+                                   <li><a href='QuestRep.aspx'><span>Questions fréquentes</span></a></li>
+                                   <li class='last'><a href='Contact.aspx'><span>Contactez-nous</span></a></li>
+                                </ul>
+</div>
+
+           </div>
+        <div class="Bodypage"> <!--4-1-->
+               <div class="leftMenu"><!--4-->
+                 
+                                     
+                                    <ul>  
+                                        <li class='last'><a href="Accueil.aspx?categorie=électriques"><span>Appareils électriques</span></a></li>
+                                        <li class='last'><a href='Accueil.aspx?categorie=professionnel'><span>Produits à usage professionnel</span></a></li>
+                                        <li class='last'><a href='Accueil.aspx?categorie=Papier'><span>Papeterie  Papier</span></a></li>
+                                        <li class='last'><a href='Accueil.aspx?categorie=Bureautique'><span>Bureautique</span></a></li>
+                                        <li class='last'><a href='Accueil.aspx?categorie=Médias'>Médias <span></span></a></li>
+                                        <li class='last'><a href='Accueil.aspx?categorie=Logiciels'><span>Logiciels </span></a></li>
+                                        <li class='last'><a href='Accueil.aspx?categorie=accessoires'><span>accessoires </span></a></li>
+                                        <li class='last'><a href='Accueil.aspx?categorie=Vêtements'><span>Vêtements</span></a></li>
+                                        <li class='last'><a href='Accueil.aspx?categorie=Services'><span>Services</span></a></li>         
+                                        <li class='last'><a href='Accueil.aspx?categorie=domestique'><span>Vie domestique</span></a></li>
+                                         <li class='last'><a href='Accueil.aspx?categorie=Bricolage'><span>Bricolage</span></a></li>
+                                          <li class='last'><a href='Accueil.aspx'><span>Autre</span></a></li>
+                                        
+                                    </ul>                               
+
+                        
+                 </div>
+                 <div class="Contenu"><!--5-->
+                 <div class="rightMenu">
+                                        <div class="recherche"><!--6.1--> <br />
+                                        
+                                       
+                                            <div style="border:1px solid black;padding:4px;width:11em;">
+                                            <table border="0" cellpadding="0">
+                                            <tr><td>
+                                            <asp:TextBox ID="rechercherTXT" runat="server" Width="119px"></asp:TextBox>
+                                           <asp:Button ID="Button1" runat="server" Text="Go" onclick="Button1_Click" OnClientClick="aspnetForm.target ='_blank';" /></td></tr>
+                                            <tr><td align="center" style="font-size:75%">
+                                           <asp:CheckBox ID="CheckBox1" runat="server" Checked/>
+                                           Rechercher dans notre site<br/>
+                                                
+                                            </td></tr></table>
+                                            </div>
+
+                                           
+                                        </div>
+                                        <div class="facebook"><!--6.2--> <br />
+                                        <div class="fb-like-box" data-href="https://www.facebook.com/ecommerce.fr" data-width="190" data-show-faces="true" data-stream="false" data-show-border="true" data-header="true"></div>
+                                         </div>
+                 </div>
+                       
+                  
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+                        </asp:ContentPlaceHolder>       
+                 </div>
+                       
+      </div>
+
+
+ </div>   
+ <div class="clear"> </div>
+   
+ <div class="footer">
+    &copy; <%= DateTime.Now.Year.ToString() %> Zakaria OUHROCHAN @ VINCI       
+ </div >  
+  
+    </form>
+</body>
+</html>
